@@ -11,16 +11,18 @@ spring:
       enabled: true
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/spring2502_heathyfood_test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useSSL=false
-#    username: root
-#    password:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/teamproject_HealthFoodLab?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useSSL=false
+    username: root
+    password:
 
-#mybatis:
-#  mapper-locations: classpath*:mapper/**/*.xml
-#  type-aliases-package: com.lyj.proj.oneteamsaproj.vo
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: org.koreait.example.teamproject_healthfoodlab.vo
+  configuration:
+    map-underscore-to-camel-case: true
 
 logging:
   level:
-    org.koreait.example.teamproject_healthfoodlab : debug
+    org.koreait.example.teamproject_healthfoodlab: debug
